@@ -2,27 +2,34 @@
 
 USING_NS_CC;
 
-Scene* HelloWorld::CreateScene()
+Scene* Game::CreateScene()
 {
 	// 'scene' is an autorelease object
 	auto scene = Scene::create();
-	auto layer = HelloWorld::create();
+	auto layer = Game::create();
 
 	scene->addChild(layer);
 
 	return scene;
 }
 
-bool HelloWorld::init()
+bool Game::init()
 {
 	if (!Layer::init())
 	{
 		return false;
 	}
 
-	auto label = Label::createWithSystemFont("Hello World", "Arial", 96);
-	label->setAnchorPoint(cocos2d::Vec2(0.0, 0.0));
-	this->addChild(label, 1);
+	sprite = SpaceShip::create("ship.png");
+	sprite->setPosition(500,500);
+	this->addChild(sprite, 0);
+
+	this->scheduleUpdate();
 
 	return true;
+}
+
+void Game::update(float deltaTime)
+{
+	sprite->update(deltaTime);
 }
