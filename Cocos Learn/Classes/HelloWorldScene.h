@@ -2,8 +2,9 @@
 
 #include "cocos2d.h"
 #include "SpaceShip.h"
+#include "Background.h"
 
-class Game : public cocos2d::Layer
+class Game : public cocos2d::Scene
 {
 public:
 	static cocos2d::Scene* CreateScene();
@@ -14,5 +15,10 @@ public:
 	CREATE_FUNC(Game);
 
 private:
-	SpaceShip *sprite;
+	cocos2d::Sprite *sprite;
+	SpaceShip *ship;
+	Background *map;
+	cocos2d::Layer *worldMapLayer, *cameraLayer;
+	cocos2d::Camera *camera;
+
 };

@@ -1,5 +1,7 @@
 #pragma once
 #include "cocos2d.h"
+#include "Vector2.h"
+#include "PhysicsComponent.h"
 
 
 class SpaceShip: public cocos2d::Sprite
@@ -7,19 +9,14 @@ class SpaceShip: public cocos2d::Sprite
 public:
 	virtual ~SpaceShip();
 
-	static SpaceShip* create(const std::string &aFilename);
+	static SpaceShip* Create(const std::string &aFilename);
 
-	CC_SYNTHESIZE(cocos2d::Vec2, m_velocity, Velocity);
-
-
-	//CREATE_FUNC(SpaceShip);
-
-	 void onEnter() override;
-	 void onExit() override;
-	 void update(float deltaTime) override;
+	//Member Functions
+	 void update(const float deltaTime) override;
 protected:
 	SpaceShip();
-
-	bool init(const std::string& aFilename);
+private:
+	void CheckOutOfScreenPosition();
+	PhysicsComponent *physicsComponent;
 };
 

@@ -10,6 +10,12 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{ef2cc40b-f07a-40c7-8d18-8f2e42507dc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprites">
+      <UniqueIdentifier>{e1dbfd22-1414-45b8-8deb-cda4fb686a87}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,11 +27,20 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\SpaceShip.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="..\Classes\Vector2.cpp">
+      <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Vector2D.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="..\Classes\PhysicsComponent.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Matrix2.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SpaceShip.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Background.cpp">
+      <Filter>Sprites</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,11 +53,20 @@
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\SpaceShip.h">
-      <Filter>src</Filter>
+    <ClInclude Include="..\Classes\Vector2.h">
+      <Filter>Physics</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Vector2D.h">
-      <Filter>src</Filter>
+    <ClInclude Include="..\Classes\PhysicsComponent.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Matrix2.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SpaceShip.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Background.h">
+      <Filter>Sprites</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

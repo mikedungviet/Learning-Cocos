@@ -21,8 +21,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	auto windowView = director->getOpenGLView();
 	if(!windowView)
 	{
-		windowView = GLViewImpl::create("Hello World");
-		windowView->setFrameSize(1000, 1000);
+		windowView = GLViewImpl::createWithFullScreen("Hello World");
 		director->setOpenGLView(windowView);
 	}
 	director->runWithScene(Game::CreateScene());

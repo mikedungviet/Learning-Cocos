@@ -27,8 +27,8 @@ public:
     virtual void applicationDidEnterBackground() override;
 
     /**
-    @brief  Called when the application reenters the foreground
-    @param  the pointer of the application
+     * @brief  Called when the application reenters the foreground
+     * @param  the pointer of the application
     */
     virtual void applicationWillEnterForeground() override;
 };
